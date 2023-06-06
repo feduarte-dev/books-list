@@ -1,7 +1,13 @@
-// const { books } = require('./data/library');
+const { books } = require('./data/library');
 
 const formatedAuthorNamesBirth = () => {
-  // escreva seu código aquisdas
+  const arr = [];
+  books.forEach((book) => {
+    arr.push(`${book.name} - ${book.genre} - ${book.author.name}`);
+  });
+  return arr;
 };
+
+console.log(formatedAuthorNamesBirth());
 
 module.exports = { formatedAuthorNamesBirth };
