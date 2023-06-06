@@ -1,7 +1,16 @@
-// const { books } = require('./data/library');
+const { books } = require('./data/library');
 
 const nameAndAge = () => {
-  // escreva seu código aqui
+  const arr = [];
+  books.forEach((book) => {
+    const obj = {
+      author: book.author.name,
+      age: book.releaseYear - book.author.birthYear,
+    };
+    arr.push(obj);
+  }); return arr.sort((a, b) => a.age - b.age);
 };
+
+console.log(nameAndAge());
 
 module.exports = { nameAndAge };
