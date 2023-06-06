@@ -2,12 +2,8 @@ const { books } = require('./data/library');
 
 const formatedAuthorNamesBirth = () => {
   const arr = [];
-  books.forEach((book) => {
-    arr.push(`${book.name} - ${book.genre} - ${book.author.name}`);
-  });
+  books.forEach((book) => arr.push(`${book.author.name} - ${book.author.birthYear}`));
   return arr;
 };
-
-console.log(formatedAuthorNamesBirth());
 
 module.exports = { formatedAuthorNamesBirth };
