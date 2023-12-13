@@ -1,4 +1,4 @@
-# README: Book list
+# README: Books list
 
 <img src="assets/books-list.png" alt="page" title="page" width=100%>
 
